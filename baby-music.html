@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class=" js no-touch csstransforms csstransitions" style="">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Fuzzy's Projects - Baby Music Box</title>
+    <link href="" rel="canonical">
+    <meta content="Fuzzy's Projects" name="description">
+    <meta content="en" name="language">
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+    <meta content="true" name="HandheldFriendly">
+    <meta content="width" name="MobileOptimized">
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+  </head>
+  <body>
+    <div class="bodyBackground">
+      <div class="bodyBackgroundContainer">
+        <header>
+          <section class="bgSection pi-background-custom-theme">
+            <div class="container">
+              <div class="row">
+                <div class="span10">
+                  <div class="widgetContainer">
+                    <div class="textContainer pi-background-custom-theme">
+                      <h1 class="wysiwyg-text-align-center"><a href="index.html">Fuzzy's Projects</a></h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="span2">
+                  <div class="imageContainer">
+                    <div class="noLinkImage img-circle-small"><br><img alt="Hi, I'm Fuzzy." src="https://s.gravatar.com/avatar/5ccd01daef6b927c75726f62fa1ca3bb?s=100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </header>
+        <section class="bgSection">
+          <div class="container">
+            <div class="row">
+              <div class="span12">
+                <div class="widgetContainer">
+                  <div class="textContainer">
+                    <h2>Baby Music Box</h2>
+                    <p><b>Objective:</b> A system to play music to a sleeping baby, which can be controlled remotely and easily triggered.</p>
+                    <p><b>Solution:</b> Yet another project which I turned to the flexible Raspberry Pi as a base. </p>
+					<p>On github I found a python and javascript based project called web-mote which had been made to serve a similar purpose, though it was to be run on a raspberry pi which had a screen connected and would play either music or video via mplayer. The web page which provided the remote control had been formatted with an ipod touch in mind.</p>
+					<p>Working with this as a base I modified the css style sheet to provide a good interface for use on my Android phone. I then realized that while this allow me to trigger playback of the music while still in bed, getting the music playing when we first put our baby down to sleep was more of a hassle than previous, when we just hit play on the mp3 player.</p>
+					<p>Initially I rigged up a web cam and used the motion software to allow us to trigger playback of music by waving a hand in front of the web cam. However this had one major flaw; music play back would trigger when the room was dark and we turned on the light.</p>
+					<p>The better solution ended up being a wireless mouse and a python script which would listen for input from the mouse buttons and wheel. Left click would trigger the playback of the mp3s in a folder. Right click stops playback. Mouse wheel up and down changes the volume.</p>
+                  </div>
+                </div>
+              </div>
+			</div>
+          </div>
+        </section>
+        <footer>
+          <section class="bgSection pi-background-mainColor">
+            <div class="container">
+              <div class="row">
+                <div class="span6">
+                  <div class="widgetContainer">
+                    <div class="textContainer">
+                      <p class="wysiwyg-text-align-left">Fuzzy's Logic Projects</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="span6">
+                  <div class="widgetContainer  ">
+                    <div class="sharelinkContainer">
+                      <div class="sharelink text-right"><a href="http://www.fuzzyslogic.com/" title="Fuzzy's Logic">Fuzzy's Logic</a></span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </footer>
+        <div style="padding:15px; text-align:center"></div>
+        <div class="bodyBackgroundOverlay"></div>
+      </div>
+    </div>
+  </body>
+</html>
