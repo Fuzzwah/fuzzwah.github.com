@@ -17,12 +17,44 @@
     <link href="media/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <style>
       body {
-          padding-top: 70px;
+        padding-top: 50px;
       }
 
       footer {
-          margin: 50px 0;
-      }    
+        margin: 50px 0;
+      }
+      
+      .hero-unit {
+        background-image:url('media/images/hero.jpg');
+        background-size:cover;
+        background-color: #11111;
+        color: #FFFFFF;
+        
+      }   
+      .hero-unit h1 {
+        color: #FFFFFF;
+        letter-spacing: -1px;
+        line-height: 1;
+        margin-bottom: 0;
+      }
+
+      .fill{
+        width:100%;
+        background-position:center;
+        background-size:cover;
+      }
+
+    /* Large desktop */
+    @media (min-width: 1200px) { ... }
+     
+    /* Portrait tablet to landscape and desktop */
+    @media (min-width: 768px) and (max-width: 979px) { ... }
+     
+    /* Landscape phone to portrait tablet */
+    @media (max-width: 767px) { ... }
+     
+    /* Landscape phones and down */
+    @media (max-width: 480px) { ... }
     </style>
         
 
@@ -88,27 +120,26 @@
         <!-- /.navbar -->
     </nav>
 
+      <!-- header -->
+      <div class="hero-unit clearfix">
+        <div class="col-lg-6 col-lg-offset-1 col-sm-9 col-xs-10">
+          <h1>Hi, I'm Fuzzy</h1>
+          <h3>Welcome to Fuzzy's Projects</h3>
+          <p>This tiny little corner of the internet is where I share information about the various projects I've spent time working on. I hope you find it interesting and helpful.</p>
+          <p>My projects include websites, media players, chrome extensions, automated systems, irc bots, XBMC plugins and online poker related tools. Basically, if I'm interested in something I end up creating something to help me enjoy it more.</p>
+          <p>I do not claim to be some kind of geek genius, most of my projects are neither original nor unique. I like to believe that I have the spirit of a <a href="http://en.wiktionary.org/wiki/bricoleur">bricoleur</a>; I create things using whatever materials and information are available. Quite often that means basing my projects on code, tools and hardware created by other people.</p>
+        </div>
+        <div class="col-lg-4 col-sm-3 col-xs-2">
+          <br />
+          <img alt="Hi, I'm Fuzzy." class="img-circle img-responsive" src="https://s.gravatar.com/avatar/5ccd01daef6b927c75726f62fa1ca3bb?s=350">
+          <br />
+        </div>
+      </div>
+      <br />
+      <br />
+      <!-- /.header -->
     <!-- Page Content -->
     <div class="container">
-
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="well clearfix">
-              <div class="col-lg-8">
-                <h1>Hi, I'm Fuzzy</h1>
-                <h3>Welcome to Fuzzy's Projects</h3>
-                <p>This tiny little corner of the internet is where I share information about the various projects I've spent time working on. I hope you find it interesting and helpful.</p>
-                <p>My projects include websites, media players, chrome extensions, automated systems, irc bots, XBMC plugins and online poker related tools. Basically, if I'm interested in something I end up creating something to help me enjoy it more.</p>
-                <p>I do not claim to be some kind of geek genius, most of my projects are neither original nor unique. I like to believe that I have the spirit of a <a href="http://en.wiktionary.org/wiki/bricoleur">bricoleur</a>; I create things using whatever materials and information are available. Quite often that means basing my projects on code, tools and hardware created by other people.</p>
-              </div>
-              <div class="col-lg-4">
-                <img alt="Hi, I'm Fuzzy." class="img-circle" src="https://s.gravatar.com/avatar/5ccd01daef6b927c75726f62fa1ca3bb?s=350">            
-              </div>
-            </div>
-        </div>
-        <br />
-        <br />
-        <!-- /.header -->
         
         <!-- project -->
         <div class="row">
