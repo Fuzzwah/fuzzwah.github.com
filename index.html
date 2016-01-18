@@ -1,365 +1,184 @@
+
+
 <!DOCTYPE html>
-<html lang="en" class=" js no-touch csstransforms csstransitions" style="">
+<html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="">
     <title>Fuzzy's Projects</title>
-    <link href="" rel="canonical">
-    <meta content="Fuzzy's Projects" name="description">
-    <meta content="en" name="language">
-    <meta charset="utf-8">
-    <meta content="width=device-width" name="viewport">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
-    <meta content="true" name="HandheldFriendly">
-    <meta content="width" name="MobileOptimized">
-	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans'>
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test description">
+    <meta name="author" content="">
+
+        <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+        <link href="media/css/bootstrap.min.css" rel="stylesheet">
+    <link href="media/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <style>
+      body {
+          padding-top: 70px;
+      }
+
+      footer {
+          margin: 50px 0;
+      }    
+    </style>
+        
+
+
+        <link rel="shortcut icon" href="media/img/favicon.ico">
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->  
+      
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->     
+    
+                 
   </head>
-  <body>
-    <header>
-      <div class="bodyBackgroundContainer">
-        <section class="bgSection pi-background-custom-theme">
-          <div class="container">
-            <div class="row">
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <p><strong><br></strong></p>
-                    <h1>Hi, I'm Fuzzy</h1>
-					<h3>Welcome to Fuzzy's Projects.</h3>
-                    <p>This tiny little corner of the internet is where I share information about the various projects I've spent time working on. I hope you find it interesting and helpful.</p>
-					<p>My projects include websites, media players, chrome extensions, automated systems, irc bots, XBMC plugins and online poker related tools. Basically, if I'm interested in something I end up creating something to help me enjoy it more.</p>
-					<p>I do not claim to be some kind of geek genius, most of my projects are neither original nor unique. I like to believe that I have the spirit of a <a href="http://en.wiktionary.org/wiki/bricoleur">bricoleur</a>; I create things using whatever materials and information are available. Quite often that means basing my projects on code, tools and hardware created by other people.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-circle-medium"><br><img alt="Hi, I'm Fuzzy." src="https://s.gravatar.com/avatar/5ccd01daef6b927c75726f62fa1ca3bb?s=350"></div>
-                  </div>
-                </div>
-              </div>
-			</div>
-          </div>
-        </header>
-        <section class="bgSection">
-          <div class="container">
-            <div class="row">
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>fuzzyslogic.com</h2>
-                    <p>The homepage at fuzzyslogic.com acts are a central collection point for things that I post on various sites around the internet. These include extended blog style posts on any topic I feel the need to ramble at length about, short updates on what I'm currently doing or thinking, photos I upload to share with friends and family, snippets and links to interesting sites I stumble on as I cruise the internet.</p>
-					<p>The system pulls in feeds from whichever sites and services are the current top of the pops. This way, when the next facebook / twitter / blogger / whatever site becomes the 'next big thing' I'll just set up a new input from that service and integrate it into this central site. Think of it as future proofing.</p>
-                    <p><a rel="nofollow" href="fuzzyslogic.html">Fuzzy's Logic</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="fuzzyslogic.com" src="images/fuzzyslogic.jpg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-		<section class="bgSection pi-background-secondColor">
-          <div class="container">
-            <div class="row">
-              <div class="span4">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="iracing-stats" width="282" src="images/ir-stats.jpg"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="span8">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>iRacing Stats</h2>
-                    <p>I've become somewhat addicted to the online racing simulator iRacing. Of course that means that I've started obsessively collecting data and setting up a system to parse it and display meaningful statistics.</p>
-					<p>The system pulls event results from the iRacing.com site and stores a copy in a local database. This allows me to create an overview and graphs which I use to track the progression of my driving.</p>
-                    <p><a rel="nofollow" href="iracing-stats.html">iRacing Stats</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bgSection">
-          <div class="container">
-            <div class="row">
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>Save to Website</h2>
-                    <p>An extension for Google Chrome which adds a "save to website" option to the menu when you right click on images on web pages.</p>
-					<p>Along with this extension you'll also need your own webserver and enough nerd points to be able to save and configure a php script that this extension interfaces with. Its super simple, but you'd better know where your web accessible paths are.</p>
-                    <p><a rel="nofollow" href="save-to-website.html">Save to Website</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="Save to Website" src="images/save-to-website.jpg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bgSection pi-background-secondColor">
-          <div class="container">
-            <div class="row">
-              <div class="span4">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="Hacker News #1's" src="images/hn1s.png"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="span8">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>Hacker News #1's</h2>
-                    <p>HackerNews is a website run by Paul Graham, the co-founding the Y Combinator seed capital firm. Users of the site submit links to news and articles which are of interest to programmers, start up founders and geeks in general. Entries are voted on by other users and the discussion threads which develop are often very insightful.</p>
-					<p>I’ve created a system which collects the details of links which reach the number 1 position on the site. I use this as a source of interesting reading and it allows me to keep up to date with the hot news even if I’m away from my computer for a few days or otherwise unable to keep up to date with HackerNews.</p>
-                    <p><a rel="nofollow" href="hn1s.html">Hacker News #1's</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bgSection">
-          <div class="container">
-            <div class="row">
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>Digital Photoframe</h2>
-                    <p>I had an old laptop which wasn’t being used for anything anymore. I decided to make use of it in a project to build a digital photoframe. I’d previously seen a number of similar projects discussed on the web so I was confident that I’d be able to learn from other people’s builds and create a very neat solution.</p>
-                    <p><a rel="nofollow" href="photoframe.html">Digital Photoframe</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="Digital Photoframe" src="images/photoframe.jpg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bgSection pi-background-secondColor">
-          <div class="container">
-            <div class="row">
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="Home Theater PC" src="images/htpc.jpg"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>Home Theater PC</h2>
-                    <p>Turning my Raspberry Pi into a Home Theater PC was never really my plan for this cool little gizmo. However when we were looking at new TVs we found that we could save around $150 by not getting a new fangled “smart tv”. I figured I could set up a much better system than what the current line up of smart tvs provided for much cheaper. After a little research I found that some extremely smart guys had made this process extremely simple by creating a specially crafted distribution of Debian linux with the sole goal of running XBMC on an R-Pi.</p>
-                    <p><a rel="nofollow" href="htpc.html">Home Theater PC</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-		<section class="bgSection">
-          <div class="container">
-            <div class="row">
-              <div class="span8">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>RFID Triggered Music Playback</h2>
-                    <p>While I’m very pleased with the Raspberry Pi + XBMC system I have in place to watch videos I found myself wanting to implement a different system for music playback.</p>
-					<p>I came across Swisher, which allows for music playback to be triggered via an RFID near field card reader. The user interacts with the system by touching an RFID card to the reader. Each card is associated with a particular music track in the system and has an image printed on the card to allow the user to visually discern between them.</p>
-                    <p><a rel="nofollow" href="rfid-music.html">RFID Triggered Music</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="RFID Triggered Music" src="images/rfid-music.jpg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bgSection pi-background-secondColor">
-          <div class="container">
-            <div class="row">
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="Baby Music Box" src="images/rpi.jpg"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="span6">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>Baby Music Box</h2>
-                    <p>My wife and I became parents for the first time in Janurary 2014. Being a geek I quickly found myself tinkering on projects which made caring for our little baby human easier. One such project is a Raspberry Pi which we use to play music to our child while she sleeps in her crib.</p>
-					<p>It allows us to start music playback by clicking a mouse button or clicking a button a web page accessed via our mobile phones or computer.<p>
-                    <p><a rel="nofollow" href="baby-music.html">Baby Music Box</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bgSection">
-          <div class="container">
-            <div class="row">
-              <div class="span8">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>XBMC Download Manager</h2>
-                    <p>One issue with using the Raspberry Pi to host the XBMC media player is that it lacks the processing grunt to be able to play back high definition video while it runs background services such as Transmission and Sick Beard. I created a small plugin for XBMC which automatically throttles downloads in Transmission and stops the Sick Beard service.</p>
-                    <p><a rel="nofollow" href="xbmc-dlmanager.html">XBMC Download Manager</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="XBMC Download Manager" src="images/xbmc-dlmanager.jpg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bgSection pi-background-secondColor">
-          <div class="container">
-            <div class="row">
-              <div class="span4">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="Poker Session Review" src="images/poker-session-review.png"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="span8">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>Poker Session Review</h2>
-                    <p>A PHP based system I created to help me analyze my online poker sessions.<p>
-                    <p><a rel="nofollow" href="poker-session-review.html">Poker Session Review</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-		<section class="bgSection">
-          <div class="container">
-            <div class="row">
-              <div class="span8">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>Poker Hand Sharing</h2>
-                    <p>A PHP based web page which allows users to post online poker hands in order to share them with people to get feedback and advice or just pitty.</p>
-                    <p><a rel="nofollow" href="pokerhand.html">Poker Hand Sharing</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="Poker Hand Sharing" src="images/poker-hand-sharing.jpg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-		<section class="bgSection pi-background-secondColor">
-          <div class="container">
-            <div class="row">
-              <div class="span4">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="Crazybot" src="images/crazybot.jpg"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="span8">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>Crazybot</h2>
-                    <p>This is the Eggdrop based IRC bot I tinker with. I have created a number of scripts which my friends and I use to entertain ourselves and generally do stupid things.<p>
-                    <p><a rel="nofollow" href="crazybot.html">Crazybot</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-		<section class="bgSection">
-          <div class="container">
-            <div class="row">
-              <div class="span8">
-                <div class="widgetContainer">
-                  <div class="textContainer">
-                    <h2>Send to Eggdrop</h2>
-                    <p>An extension for Google Chrome which allows the user to send a url to an IRC channel via an Eggdrop bot.</p>
-                    <p><a rel="nofollow" href="send-to-eggdrop.html">Send to Eggdrop</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="widgetContainer">
-                  <div class="imageContainer">
-                    <div class="noLinkImage img-polaroid"><img alt="Send to Eggdrop" src="images/send-to-eggdrop.jpg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <footer>
-          <section class="bgSection pi-background-mainColor">
-            <div class="container">
-              <div class="row">
-                <div class="span6">
-                  <div class="widgetContainer">
-                    <div class="textContainer">
-                      <p class="wysiwyg-text-align-left">Fuzzy's Logic Projects</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="span6">
-                  <div class="widgetContainer  ">
-                    <div class="sharelinkContainer">
-                      <div class="sharelink text-right"><a href="http://www.fuzzyslogic.com/" title="Fuzzy's Logic">Fuzzy's Logic</a></span></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </footer>
-        <div style="padding:15px; text-align:center"></div>
-        <div class="bodyBackgroundOverlay"></div>
+
+  <body role="document">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">Fuzzy's Projects</a>
+      <div class="nav-collapse collapse">
+                <ul class="nav">
+</ul>
       </div>
     </div>
-  </body>
+  </div>
+  </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Fuzzy's Projects</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.navbar -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="well clearfix">
+              <div class="col-lg-8">
+                <h1>Hi, I'm Fuzzy</h1>
+                <h3>Welcome to Fuzzy's Projects</h3>
+                <p>This tiny little corner of the internet is where I share information about the various projects I've spent time working on. I hope you find it interesting and helpful.</p>
+                <p>My projects include websites, media players, chrome extensions, automated systems, irc bots, XBMC plugins and online poker related tools. Basically, if I'm interested in something I end up creating something to help me enjoy it more.</p>
+                <p>I do not claim to be some kind of geek genius, most of my projects are neither original nor unique. I like to believe that I have the spirit of a <a href="http://en.wiktionary.org/wiki/bricoleur">bricoleur</a>; I create things using whatever materials and information are available. Quite often that means basing my projects on code, tools and hardware created by other people.</p>
+              </div>
+              <div class="col-lg-4">
+                <img alt="Hi, I'm Fuzzy." class="img-circle" src="https://s.gravatar.com/avatar/5ccd01daef6b927c75726f62fa1ca3bb?s=350">            
+              </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <!-- /.header -->
+        
+        <!-- project -->
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+                <h3>Fuzzy's Logic</h3>
+                <h4>A central collection of my things</h4>
+                <p>The homepage at fuzzyslogic.com acts are a central collection point for things that I post on various sites around the internet. These include extended blog style posts on any topic I feel the need to ramble at length about, short updates on what I'm currently doing or thinking, photos I upload to share with friends and family, snippets and links to interesting sites I stumble on as I cruise the internet.</p>
+                <p>The system pulls in feeds from whichever sites and services are the current top of the pops. This way, when the next facebook / twitter / blogger / whatever site becomes the 'next big thing' I'll just set up a new input from that service and integrate it into this central site. Think of it as future proofing.</p>
+                <p><a class="btn btn-primary" href="http://fuzzyslogic.com">Visit Fuzzy's Logic <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+                <a href="#">
+                    <img class="img-responsive" src="media/images/fuzzyslogic.png" alt="">
+                </a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <hr>
+        <!-- /.project -->
+
+        <!-- project -->
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+                <h3>iRacing Stats</h3>
+                <h4>Graphs and interesting statistics about your iRacing career</h4>
+                <p>I've become somewhat addicted to the online racing simulator iRacing. Of course that means that I've started obsessively collecting data and setting up a system to parse it and display meaningful statistics.</p>
+                <p>The system pulls event results from the iRacing.com site and stores a copy in a local database. This allows me to create an overview and graphs which I use to track the progression of my driving.</p>
+                <p><a class="btn btn-primary" href="http://www.fuzzwahracing.com/p/iracing-stats-app.html">iRacing Stats Page <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+                <a href="#">
+                    <img class="img-responsive" src="media/images/iracing_stats.png" alt="">
+                </a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <hr>
+        <!-- /.project -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2016</p>
+                </div>
+            </div>
+            <!-- /.footer -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+     
+    
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="media/js/libs/jquery.min.js"><\/script>')</script>
+    
+        <script src="media/js/libs/bootstrap.min.js"></script>
+    <script src="media/js/libs/ie10-viewport-bug-workaround.js"></script>
+    
+        
+
+    <!--[if lt IE 7 ]>
+      <script src="media/js/libs/dd_belatedpng.js"></script>
+      <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+    <![endif]-->
+
+
+
+      </body>
 </html>
