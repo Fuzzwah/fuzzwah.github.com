@@ -53,12 +53,12 @@ Add aliases to your ~/.gitconfig file:
 Configuration  
 -------------  
 	
-git config -e [--global]  
-	edit the .git/config [or ~/.gitconfig] file in your $EDITOR  
+	git config -e [--global]  
+edit the .git/config [or ~/.gitconfig] file in your $EDITOR  
 	
-git config --global user.name 'John Doe'  
-git config --global user.email johndoe@example.com  
-	sets your name and email for commit messages  
+	git config --global user.name 'John Doe'  
+	git config --global user.email johndoe@example.com  
+sets your name and email for commit messages  
 	
 git config branch.autosetupmerge true  
 	tells git-branch and git-checkout to setup new branches so that git-pull(1)  
