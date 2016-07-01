@@ -2,8 +2,7 @@ Setup
 -----  
 	
 	git clone <repo>  
-clone the repository specified by <repo>; this is similar to "checkout" in  
-some other version control systems such as Subversion and CVS  
+clone the repository specified by <repo>; this is similar to "checkout" in some other version control systems such as Subversion and CVS  
 	
 Add colors to your ~/.gitconfig file:  
 	
@@ -61,14 +60,10 @@ edit the .git/config [or ~/.gitconfig] file in your $EDITOR
 sets your name and email for commit messages  
 	
 	git config branch.autosetupmerge true  
-tells git-branch and git-checkout to setup new branches so that git-pull(1)  
-will appropriately merge from that remote branch.  Recommended.  Without this,  
-you will have to add --track to your branch command or manually merge remote  
-tracking branches with "fetch" and then "merge".  
+tells git-branch and git-checkout to setup new branches so that git-pull(1) will appropriately merge from that remote branch. Recommended.  Without this, you will have to add --track to your branch command or manually merge remote tracking branches with "fetch" and then "merge".  
 	
 	git config core.autocrlf true  
-This setting tells git to convert the newlines to the system's standard  
-when checking out files, and to LF newlines when committing in  
+This setting tells git to convert the newlines to the system's standard when checking out files, and to LF newlines when committing in  
 	
 	git config --list  
 To view all options  
@@ -76,20 +71,16 @@ To view all options
 	git config apply.whitespace nowarn  
 To ignore whitespace  
 	
-You can add "--global" after "git config" to any of these commands to make it  
-apply to all git repos (writes to ~/.gitconfig).  
+You can add "--global" after "git config" to any of these commands to make it apply to all git repos (writes to ~/.gitconfig).  
 	
 	
 Info  
 ----  
 	git reflog  
-Use this to recover from *major* mess ups! It's basically a log of the  
-last few actions and you might have luck and find old commits that  
-have been lost by doing a complex merge.  
+Use this to recover from *major* mess ups! It's basically a log of the last few actions and you might have luck and find old commits that have been lost by doing a complex merge.  
 	
 	git diff  
-show a diff of the changes made since your last commit  
-to diff one file: "git diff -- <filename>"  
+show a diff of the changes made since your last commit to diff one file: `it diff -- <filename>`  
 to show a diff between staging area and HEAD: `git diff --cached`  
 	
 	git status  
@@ -109,11 +100,10 @@ show recent commits, most recent on top. Useful options:
 	
 	git log <ref>..<ref>  
 show commits between the specified range. Useful for seeing changes from remotes:  
-git log HEAD..origin/master # after git remote update  
+	git log HEAD..origin/master # after git remote update  
 	
 	git show <rev>  
-show the changeset (diff) of a commit specified by <rev>, which can be any  
-SHA1 commit ID, branch name, or tag (shows the last commit (HEAD) by default)  
+show the changeset (diff) of a commit specified by <rev>, which can be any SHA1 commit ID, branch name, or tag (shows the last commit (HEAD) by default)  
 
 also to show the contents of a file at a specific revision, use   
 	it show <rev>:<filename>  
@@ -148,8 +138,7 @@ shows diff for staged (git-add'ed) files (which includes uncommitted git cherry-
 list all files in the index and under version control.  
 	
 	git ls-remote <remote> [HEAD]  
-show the current version on the remote repo. This can be used to check whether  
-a local is required by comparing the local head revision.  
+show the current version on the remote repo. This can be used to check whether a local is required by comparing the local head revision.  
 	
 Adding / Deleting  
 -----------------  
@@ -212,16 +201,13 @@ Committing
 ----------  
 	
 	git commit <file1> <file2> ... [-m <msg>]  
-commit <file1>, <file2>, etc..., optionally using commit message <msg>,  
-otherwise opening your editor to let you type a commit message  
+commit <file1>, <file2>, etc..., optionally using commit message <msg>, otherwise opening your editor to let you type a commit message  
 	
 	git commit -a  
-commit all files changed since your last commit  
-(does not include new (untracked) files)  
+commit all files changed since your last commit (does not include new (untracked) files)  
 	
 	git commit -v  
-commit verbosely, i.e. includes the diff of the contents being committed in  
-the commit message screen  
+commit verbosely, i.e. includes the diff of the contents being committed in the commit message screen  
 	
 	git commit --amend  
 edit the commit message of the most recent commit  
@@ -250,24 +236,30 @@ create a new branch named <branch>, referencing <start-point>, which may be spec
 	
 	git push <repo> <start-point>:refs/heads/<branch>  
 create a new remote branch named <branch>, referencing <start-point> on the remote. Repo is the name of the remote.  
-	Example: git push origin origin:refs/heads/branch-1  
-	Example: git push origin origin/branch-1:refs/heads/branch-2  
-	Example: git push origin branch-1 ## shortcut  
+Example: 
+	git push origin origin:refs/heads/branch-1  
+Example: 
+	git push origin origin/branch-1:refs/heads/branch-2  
+Example: 
+	git push origin branch-1 ## shortcut  
 	
 	git branch --track <branch> <remote-branch>  
 create a tracking branch. Will push/pull changes to/from another repository.  
-	Example: git branch --track experimental origin/experimental  
+Example: 
+	git branch --track experimental origin/experimental  
 	
 	git branch --set-upstream <branch> <remote-branch> (As of Git 1.7.0)  
 Make an existing branch track a remote branch  
-	Example: git branch --set-upstream foo origin/foo  
+Example: 
+	git branch --set-upstream foo origin/foo  
 	
 	git branch -d <branch>  
 delete the branch <branch>; if the branch you are deleting points to a commit which is not reachable from the current branch, this command will fail with a warning.  
 	
 	git branch -r -d <remote-branch>  
 delete a remote-tracking branch.  
-	Example: git branch -r -d wycats/master  
+Example: 
+	git branch -r -d wycats/master  
 	
 	git branch -D <branch>  
 even if the branch points to a commit not reachable from the current branch, you may know that that commit is still reachable from some other branch or tag. In that case it is safe to use this command to force git to delete the branch.  
@@ -280,7 +272,8 @@ create a new branch <new> referencing <start-point>, and check it out.
 	
 	git push <repository> :<branch>  
 removes a branch from a remote repository.  
-	Example: git push origin :old_branch_to_be_deleted  
+Example: 
+	git push origin :old_branch_to_be_deleted  
 	
 	git co <branch> <path to new file>  
 Checkout a file from another branch and add it to this branch. File will still need to be added to the git branch, but it's present.  
@@ -288,7 +281,8 @@ Eg. git co remote_at_origin__tick702_antifraud_blocking ..../...nt_elements_for_
 	
 	git show <branch> -- <path to file that does not exist>  
 show the contents of a file that was created on another branch and that does not exist on the current branch.  
-	Example: git show remote_tick702 -- path/to/fubar.txt  
+Example: 
+	git show remote_tick702 -- path/to/fubar.txt  
 
 	git show <rev>:<repo path to file>  
 Show the contents of a file at the specific revision. Note: path has to be absolute within the repo.  
@@ -310,7 +304,8 @@ Cherry-Picking
 	
 	git cherry-pick [--edit] [-n] [-m parent-number] [-s] [-x] <commit>  
 selectively merge a single commit from another local branch  
-	Example: git cherry-pick 7300a6130d9447e18a931e898b64eefedea19544  
+Example: 
+	git cherry-pick 7300a6130d9447e18a931e898b64eefedea19544  
 	
 	git hash-object <file-path>  
 get the blob of some file whether it is in a repository or not  
@@ -330,7 +325,7 @@ Squashing
 WARNING: "git rebase" changes history. Be careful. Google it.  
 	
 	git rebase --interactive HEAD~10  
-(then change all but the first "pick" to "squash")  
+	(then change all but the first "pick" to "squash") 
 squash the last 10 commits into one big commit  
 
 Conflicts  
