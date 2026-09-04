@@ -272,8 +272,40 @@
     border-left: 3px solid var(--green-faint);
     padding: 6px 0 10px 14px;
     margin: 0 0 10px;
+    min-height: 148px;
   }
+  li.proj::after { content: ""; display: block; clear: both; }
   li.proj:hover { border-left-color: var(--green); background: rgba(60,255,110,0.03); }
+
+  .proj-shot {
+    float: right;
+    width: 220px;
+    margin: 0 0 8px 18px;
+    padding: 4px;
+    border: 1px solid var(--line);
+    background: #010701;
+  }
+  .proj-shot img {
+    display: block;
+    width: 100%;
+    height: 126px;
+    object-fit: cover;
+    object-position: top left;
+  }
+  .proj-shot figcaption {
+    margin-top: 3px;
+    color: var(--green-faint);
+    font-size: 15px;
+    line-height: 1.05;
+  }
+  .shot-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+  .shot-pair img { height: 126px; }
+  @media (max-width: 640px) {
+    li.proj { min-height: 0; }
+    .proj-shot { float: none; width: 100%; max-width: 360px; margin: 10px 0 8px; }
+    .proj-shot img { height: 190px; }
+    .shot-pair img { height: 190px; }
+  }
 
   .prow { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
   .pdate { color: var(--green-faint); font-size: 17px; }
@@ -394,9 +426,9 @@
 
       <nav class="cd" aria-label="section quick jump">
         <span class="prompt" style="color:var(--green-faint)">fuzzwah@projects:~$</span> cd
+        <a href="#sim">~/simracing</a>
         <a href="#lab">~/lab</a>
         <a href="#agents">~/agents</a>
-        <a href="#sim">~/simracing</a>
         <a href="#sites">~/sites</a>
         <a href="#vintage">~/vintage</a>
         <a href="#foot">~/exit</a>
@@ -405,6 +437,116 @@
 
     </div>
   </div>
+
+  <!-- ============ ~/simracing ============ -->
+  <div class="win" id="sim" role="region" aria-label="sim racing projects">
+    <div class="winbar">
+      <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="wt">fuzzwah@projects: <em>~/simracing</em></span>
+    </div>
+    <div class="winbody">
+      <h2><span class="hash">#</span> <span class="cd">~/simracing</span> — the iRacing lab <span class="faint" style="font-size:19px">(2018 – present)</span></h2>
+      <p class="dim" style="margin-top:2px">I got hooked on the iRacing simulator, and of course that meant obsessively collecting data and building tools around it.</p>
+
+      <ul class="projlist">
+        <li class="proj">
+<figure class="proj-shot proj-shot-pair">
+            <div class="shot-pair">
+              <img src="media/images/projects/iracingreports.webp" alt="Screenshot of the iRacing Reports web application">
+              <img src="media/images/projects/iracingreports-discord.webp" alt="Screenshot of the iRacing Reports Discord bot page">
+            </div>
+            <figcaption>web app + Discord bot</figcaption>
+          </figure>
+          <div class="prow">
+            <span class="pdate">2026-09</span>
+            <a class="pname" href="https://iracingreports.com/">iracingreports.com</a>
+            <span class="pstat active">ACTIVE</span>
+            <span class="pmeta">django · rabbitmq · postgresql</span>
+          </div>
+          <p class="pdesc">Statistics and analysis of iRacing drivers and official series results, live at iracingreports.com. A Python + RabbitMQ collector ingests iRacing service info and race results into PostgreSQL; the Django 4.2 app behind the site serves it up. The companion Discord bot brings those reports into Discord too. This is the grown-up, deployed end of the stats project family that starts in the museum below.</p>
+          <p class="plinks"><a href="https://iracingreports.com/">[web app]</a><a href="https://discordbot.iracingreports.com/">[Discord bot]</a><span class="lock">[code: private]</span></p>
+        </li>
+
+        <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/simhub.webp" alt="Screenshot of the SimHub dashboard project page">
+            <figcaption>project page</figcaption>
+          </figure>
+          <div class="prow">
+            <span class="pdate">2026-03</span>
+            <a class="pname" href="https://github.com/Fuzzwah/simhub-dash-fuzzwah-v2">simhub-dash-fuzzwah-v2</a>
+            <span class="pstars">★6</span>
+            <span class="pstat active">ACTIVE</span>
+            <span class="pmeta">simhub · custom css</span>
+          </div>
+          <p class="pdesc">My custom SimHub dashboards, tuned for the cars I race. The left panel changes per car — adjustable ABS, TC and ARB on track where available — covering GT3s, GTEs, the Ford GT and V8 Supercars.</p>
+          <p class="plinks"><a href="https://github.com/Fuzzwah/simhub-dash-fuzzwah-v2">[repo]</a></p>
+        </li>
+
+        <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/irffb.webp" alt="Screenshot of the irFFB GitHub repository page">
+            <figcaption>archived repo page</figcaption>
+          </figure>
+          <div class="prow">
+            <span class="pdate">2025-12</span>
+            <a class="pname" href="https://github.com/Fuzzwah/irFFB">irFFB</a>
+            <span class="pstars">★107</span>
+            <span class="pstat arch">ARCHIVED FORK</span>
+            <span class="pmeta">c++</span>
+          </div>
+          <p class="pdesc">The single most-starred thing on my profile: a fork of the classic iRacing force-feedback utility, kept alive with fixes and releases. Archived once I was sure I wouldn't touch it again — but it remains the reference FFB tool on the service.</p>
+          <p class="plinks"><a href="https://github.com/Fuzzwah/irFFB">[repo]</a></p>
+        </li>
+
+        <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/raceinfo.webp" alt="Screenshot of the Race Info GitHub repository page">
+            <figcaption>project page</figcaption>
+          </figure>
+          <div class="prow">
+            <span class="pdate">2020-05</span>
+            <a class="pname" href="https://github.com/Fuzzwah/race-info">race-info</a>
+            <span class="pstars">★9</span>
+            <span class="pstat stall">SHELVED</span>
+            <span class="pmeta">python</span>
+          </div>
+          <p class="pdesc">A pre-race briefing on your rivals: pulls each driver's licence and iRating from the Session Info API, estimates strength of field and championship points down to 5th, then digs through each driver's series history — races run, standing, average finish, average incidents.</p>
+          <p class="plinks"><a href="https://github.com/Fuzzwah/race-info">[repo]</a></p>
+        </li>
+
+        <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/highlighter.webp" alt="Screenshot of the iRacing results highlighter repository page">
+            <figcaption>project page + README</figcaption>
+          </figure>
+          <div class="prow">
+            <span class="pdate">2021-06</span>
+            <a class="pname" href="https://github.com/Fuzzwah/iRacing-My-Results-Highlighter">iRacing-My-Results-Highlighter</a>
+            <span class="pstars">★3</span>
+            <span class="pstat stall">SHELVED</span>
+            <span class="pmeta">javascript · userscript</span>
+          </div>
+          <p class="pdesc">Highlights the rows that are yours in iRacing's event results tables, so you can find yourself in a 40-car field at a glance.</p>
+          <p class="plinks"><a href="https://github.com/Fuzzwah/iRacing-My-Results-Highlighter">[repo]</a></p>
+        </li>
+
+        <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/iracing-series.webp" alt="Screenshot of the iRacing Series Participation OpenUserJS page">
+            <figcaption>OpenUserJS page</figcaption>
+          </figure>
+          <div class="prow">
+            <span class="pdate">2019-08</span>
+            <a class="pname" href="https://github.com/Fuzzwah/iRacing-Series-Participation">iRacing-Series-Participation</a>
+            <span class="pstars">★2</span>
+            <span class="pstat stall">SHELVED</span>
+            <span class="pmeta">javascript · userscript</span>
+          </div>
+          <p class="pdesc">Puts a barchart on each iRacing series page showing driver participation and strength of field, so you know whether a series is worth entering that week.</p>
+          <p class="plinks"><a href="https://github.com/Fuzzwah/iRacing-Series-Participation">[repo]</a><a href="https://openuserjs.org/scripts/Fuzzwah/iRacing_Series_Participation">[openuserjs]</a></p>
+        </li>
+      </ul>
 
   <!-- ============ ~/lab — what I'm cooking now ============ -->
   <div class="win" id="lab" role="region" aria-label="current lab">
@@ -417,6 +559,10 @@
 
       <ul class="projlist">
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/dcss-morgue-report.webp" alt="Screenshot of the DCSS Morgue Report example webpage">
+            <figcaption>live example report</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2026-09</span>
             <a class="pname" href="https://github.com/Fuzzwah/dcss-morgue-report">dcss-morgue-report</a>
@@ -428,6 +574,10 @@
         </li>
 
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/recipes.webp" alt="Screenshot of Fuzzwah's Recipes website">
+            <figcaption>recipes.fuzzwah.com</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2026-04</span>
             <a class="pname" href="https://github.com/Fuzzwah/recipes">recipes</a>
@@ -440,6 +590,10 @@
         </li>
 
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/books.webp" alt="Screenshot of Fuzzwah Books reading history website">
+            <figcaption>books.fuzzwah.com</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2026-04</span>
             <a class="pname" href="https://github.com/Fuzzwah/books.fuzzwah.com">books.fuzzwah.com</a>
@@ -451,6 +605,10 @@
         </li>
 
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/rfid.webp" alt="Screenshot of the RFID triggered music project page">
+            <figcaption>project page</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2025-10</span>
             <a class="pname" href="https://github.com/Fuzzwah/rfid-triggered-music">rfid-triggered-music</a>
@@ -475,6 +633,10 @@
 
       <ul class="projlist">
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/blog.webp" alt="Screenshot of Fuzzwah's AI learning blog">
+            <figcaption>blog.fuzzwah.com</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2026-04</span>
             <a class="pname" href="https://github.com/Fuzzwah/blog.fuzzwah.com">blog.fuzzwah.com</a>
@@ -486,6 +648,10 @@
         </li>
 
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/skills.webp" alt="Screenshot of the agentic coding skills project page">
+            <figcaption>project page</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2026-05</span>
             <a class="pname" href="https://github.com/Fuzzwah/code-agent-skills-and-commands">code-agent-skills-and-commands</a>
@@ -497,6 +663,10 @@
         </li>
 
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/pioven.webp" alt="Screenshot of the pi-oven project page">
+            <figcaption>project page</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2026-04</span>
             <a class="pname" href="https://github.com/Fuzzwah/pi-oven">pi-oven</a>
@@ -508,6 +678,10 @@
         </li>
 
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/stacktui.webp" alt="Screenshot of the StackTUI project page">
+            <figcaption>project page</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2026-03</span>
             <a class="pname" href="https://github.com/Fuzzwah/stacktui">stacktui</a>
@@ -519,6 +693,10 @@
         </li>
 
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/mcp.webp" alt="Screenshot of the GitHub Docs MCP Server project page">
+            <figcaption>project page</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2025-10</span>
             <a class="pname" href="https://github.com/Fuzzwah/github-docs-mcp-server">github-docs-mcp-server</a>
@@ -530,6 +708,10 @@
         </li>
 
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/vscode.webp" alt="Screenshot of the Copilot premium status bar project page">
+            <figcaption>project page</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2026-01</span>
             <a class="pname" href="https://github.com/Fuzzwah/vscode-extension-copilot-premium-requests-status-bar">vscode-copilot-premium-status-bar</a>
@@ -541,6 +723,10 @@
         </li>
 
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/dotfiles.webp" alt="Screenshot of the dotfiles project page">
+            <figcaption>project page</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2026-05</span>
             <a class="pname" href="https://github.com/Fuzzwah/dotfiles">dotfiles</a>
@@ -552,116 +738,7 @@
         </li>
       </ul>
 
-      <h3>screen captures</h3>
-      <div class="museum-grid" style="grid-template-columns:1fr 1fr">
-        <div class="mcard">
-          <div class="shot"><img src="media/images/current/stacktui-nord.svg" alt="stacktui dashboard in the nord colour theme"></div>
-          <div class="shot-cap">stacktui — nord theme</div>
-        </div>
-        <div class="mcard">
-          <div class="shot"><img src="media/images/current/stacktui-textual-dark.svg" alt="stacktui dashboard in the default textual-dark theme"></div>
-          <div class="shot-cap">stacktui — textual-dark theme</div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- ============ ~/simracing ============ -->
-  <div class="win" id="sim" role="region" aria-label="sim racing projects">
-    <div class="winbar">
-      <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span class="wt">fuzzwah@projects: <em>~/simracing</em></span>
-    </div>
-    <div class="winbody">
-      <h2><span class="hash">#</span> <span class="cd">~/simracing</span> — the iRacing lab <span class="faint" style="font-size:19px">(2018 – present)</span></h2>
-      <p class="dim" style="margin-top:2px">I got hooked on the iRacing simulator, and of course that meant obsessively collecting data and building tools around it.</p>
-
-      <ul class="projlist">
-        <li class="proj">
-          <div class="prow">
-            <span class="pdate">2026-09</span>
-            <a class="pname" href="https://iracingreports.com/">iracingreports.com</a>
-            <span class="pstat active">ACTIVE</span>
-            <span class="pmeta">django · rabbitmq · postgresql</span>
-          </div>
-          <p class="pdesc">Statistics and analysis of iRacing drivers and official series results, live at iracingreports.com. A Python + RabbitMQ collector ingests iRacing service info and race results into PostgreSQL; the Django 4.2 app behind the site serves it up. The grown-up, deployed end of the stats project family that starts in the museum below.</p>
-          <p class="plinks"><a href="https://iracingreports.com/">[site]</a><span class="lock">[code: private]</span></p>
-        </li>
-
-        <li class="proj">
-          <div class="prow">
-            <span class="pdate">2026-03</span>
-            <a class="pname" href="https://github.com/Fuzzwah/simhub-dash-fuzzwah-v2">simhub-dash-fuzzwah-v2</a>
-            <span class="pstars">★6</span>
-            <span class="pstat active">ACTIVE</span>
-            <span class="pmeta">simhub · custom css</span>
-          </div>
-          <p class="pdesc">My custom SimHub dashboards, tuned for the cars I race. The left panel changes per car — adjustable ABS, TC and ARB on track where available — covering GT3s, GTEs, the Ford GT and V8 Supercars.</p>
-          <p class="plinks"><a href="https://github.com/Fuzzwah/simhub-dash-fuzzwah-v2">[repo]</a></p>
-        </li>
-
-        <li class="proj">
-          <div class="prow">
-            <span class="pdate">2025-12</span>
-            <a class="pname" href="https://github.com/Fuzzwah/irFFB">irFFB</a>
-            <span class="pstars">★107</span>
-            <span class="pstat arch">ARCHIVED FORK</span>
-            <span class="pmeta">c++</span>
-          </div>
-          <p class="pdesc">The single most-starred thing on my profile: a fork of the classic iRacing force-feedback utility, kept alive with fixes and releases. Archived once I was sure I wouldn't touch it again — but it remains the reference FFB tool on the service.</p>
-          <p class="plinks"><a href="https://github.com/Fuzzwah/irFFB">[repo]</a></p>
-        </li>
-
-        <li class="proj">
-          <div class="prow">
-            <span class="pdate">2020-05</span>
-            <a class="pname" href="https://github.com/Fuzzwah/race-info">race-info</a>
-            <span class="pstars">★9</span>
-            <span class="pstat stall">SHELVED</span>
-            <span class="pmeta">python</span>
-          </div>
-          <p class="pdesc">A pre-race briefing on your rivals: pulls each driver's licence and iRating from the Session Info API, estimates strength of field and championship points down to 5th, then digs through each driver's series history — races run, standing, average finish, average incidents.</p>
-          <p class="plinks"><a href="https://github.com/Fuzzwah/race-info">[repo]</a></p>
-        </li>
-
-        <li class="proj">
-          <div class="prow">
-            <span class="pdate">2021-06</span>
-            <a class="pname" href="https://github.com/Fuzzwah/iRacing-My-Results-Highlighter">iRacing-My-Results-Highlighter</a>
-            <span class="pstars">★3</span>
-            <span class="pstat stall">SHELVED</span>
-            <span class="pmeta">javascript · userscript</span>
-          </div>
-          <p class="pdesc">Highlights the rows that are yours in iRacing's event results tables, so you can find yourself in a 40-car field at a glance.</p>
-          <p class="plinks"><a href="https://github.com/Fuzzwah/iRacing-My-Results-Highlighter">[repo]</a></p>
-        </li>
-
-        <li class="proj">
-          <div class="prow">
-            <span class="pdate">2019-08</span>
-            <a class="pname" href="https://github.com/Fuzzwah/iRacing-Series-Participation">iRacing-Series-Participation</a>
-            <span class="pstars">★2</span>
-            <span class="pstat stall">SHELVED</span>
-            <span class="pmeta">javascript · userscript</span>
-          </div>
-          <p class="pdesc">Puts a barchart on each iRacing series page showing driver participation and strength of field, so you know whether a series is worth entering that week.</p>
-          <p class="plinks"><a href="https://github.com/Fuzzwah/iRacing-Series-Participation">[repo]</a><a href="https://openuserjs.org/scripts/Fuzzwah/iRacing_Series_Participation">[openuserjs]</a></p>
-        </li>
-      </ul>
-
-      <h3>screen captures</h3>
-      <div class="museum-grid" style="grid-template-columns:1fr 1fr">
-        <div class="mcard">
-          <div class="shot"><img src="media/images/current/simhub-dash.png" alt="simhub dashboard main panel"></div>
-          <div class="shot-cap">simhub-dash-fuzzwah-v2 — main panel</div>
-        </div>
-        <div class="mcard">
-          <div class="shot"><img src="media/images/current/simhub-dash-left.png" alt="simhub dashboard car-specific left panel"></div>
-          <div class="shot-cap">simhub-dash-fuzzwah-v2 — car-specific left panel</div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- ============ ~/sites — live sites, private code ============ -->
   <div class="win" id="sites" role="region" aria-label="public sites with private code">
@@ -674,17 +751,25 @@
 
       <ul class="projlist">
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/qrbomber.webp" alt="Screenshot of the QR Bomber game captured before its public site went offline">
+            <figcaption>last playable build — site now offline</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2025-09</span>
             <a class="pname" href="https://qrbomber.com/">qrbomber.com</a>
-            <span class="pstat active">PLAYABLE</span>
+            <span class="pstat stall">INACTIVE</span>
             <span class="pmeta">typescript</span>
           </div>
-          <p class="pdesc">A Bomberman-inspired puzzle game where explosions carve a path through a maze derived from QR-code patterns — place bombs, collect powerups, kick bombs, and reach the exit before the shrinking safe zone forces you on. Every level's URL generates a unique maze.</p>
-          <p class="plinks"><a href="https://qrbomber.com/">[play it live]</a><span class="lock">[code: private]</span></p>
+          <p class="pdesc">A Bomberman-inspired puzzle game where explosions carve a path through a maze derived from QR-code patterns — place bombs, collect powerups, kick bombs, and reach the exit before the shrinking safe zone forces you on. Every level's URL generates a unique maze. The public site is currently offline; the screenshot shows the last playable build.</p>
+          <p class="plinks"><a class="down" href="https://qrbomber.com/">[site: currently offline]</a><span class="lock">[code: private]</span></p>
         </li>
 
         <li class="proj">
+<figure class="proj-shot">
+            <img src="media/images/projects/photos.webp" alt="Screenshot of the Fuzzwah photo gallery website">
+            <figcaption>photos.fuzzwah.com</figcaption>
+          </figure>
           <div class="prow">
             <span class="pdate">2023-11</span>
             <a class="pname" href="https://photos.fuzzwah.com/">photos.fuzzwah.com</a>
