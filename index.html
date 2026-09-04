@@ -294,6 +294,7 @@
   .pdesc { margin: 3px 0 4px; color: var(--green-dim); max-width: 78ch; }
   .plinks { font-size: 18px; }
   .plinks a { margin-right: 14px; color: var(--cyan); }
+  .plinks .lock { margin-right: 14px; color: var(--green-faint); }
   .plinks .down { color: var(--red); cursor: not-allowed; border-bottom: 1px dotted rgba(255,92,92,.6); }
   .pnote { color: var(--green-faint); font-size: 17px; margin: 2px 0 0; }
   .pmeta { font-size: 17px; color: var(--green-faint); }
@@ -396,6 +397,7 @@
         <a href="#lab">~/lab</a>
         <a href="#agents">~/agents</a>
         <a href="#sim">~/simracing</a>
+        <a href="#sites">~/sites</a>
         <a href="#vintage">~/vintage</a>
         <a href="#foot">~/exit</a>
       </nav>
@@ -433,8 +435,8 @@
             <span class="pstat active">ACTIVE</span>
             <span class="pmeta">markdown · python</span>
           </div>
-          <p class="pdesc">The recipes I actually cook and eat, each in a handy markdown file with a photo of the result. 99 recipes at last count, and growing. My most-starred original project, which says something about the internet.</p>
-          <p class="plinks"><a href="https://github.com/Fuzzwah/recipes">[repo]</a></p>
+          <p class="pdesc">The recipes I actually cook and eat, each in a handy markdown file with a photo of the result. 99 recipes at last count, and growing. A Jekyll companion site — evolved from the old Chowdown template — serves them up with a photo pipeline, search and a changelog. My most-starred original project, which says something about the internet.</p>
+          <p class="plinks"><a href="https://github.com/Fuzzwah/recipes">[repo]</a><a href="https://recipes.fuzzwah.com/">[site]</a></p>
         </li>
 
         <li class="proj">
@@ -577,6 +579,17 @@
       <ul class="projlist">
         <li class="proj">
           <div class="prow">
+            <span class="pdate">2026-09</span>
+            <a class="pname" href="https://iracingreports.com/">iracingreports.com</a>
+            <span class="pstat active">ACTIVE</span>
+            <span class="pmeta">django · rabbitmq · postgresql</span>
+          </div>
+          <p class="pdesc">Statistics and analysis of iRacing drivers and official series results, live at iracingreports.com. A Python + RabbitMQ collector ingests iRacing service info and race results into PostgreSQL; the Django 4.2 app behind the site serves it up. The grown-up, deployed end of the stats project family that starts in the museum below.</p>
+          <p class="plinks"><a href="https://iracingreports.com/">[site]</a><span class="lock">[code: private]</span></p>
+        </li>
+
+        <li class="proj">
+          <div class="prow">
             <span class="pdate">2026-03</span>
             <a class="pname" href="https://github.com/Fuzzwah/simhub-dash-fuzzwah-v2">simhub-dash-fuzzwah-v2</a>
             <span class="pstars">★6</span>
@@ -647,6 +660,41 @@
           <div class="shot-cap">simhub-dash-fuzzwah-v2 — car-specific left panel</div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ============ ~/sites — live sites, private code ============ -->
+  <div class="win" id="sites" role="region" aria-label="public sites with private code">
+    <div class="winbar">
+      <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="wt">fuzzwah@projects: <em>~/sites</em></span>
+    </div>
+    <div class="winbody">
+      <h2><span class="hash">#</span> <span class="cd">~/sites</span> — live on the web, code under lock <span class="faint" style="font-size:19px">(some code is private — the sites aren't)</span></h2>
+
+      <ul class="projlist">
+        <li class="proj">
+          <div class="prow">
+            <span class="pdate">2025-09</span>
+            <a class="pname" href="https://qrbomber.com/">qrbomber.com</a>
+            <span class="pstat active">PLAYABLE</span>
+            <span class="pmeta">typescript</span>
+          </div>
+          <p class="pdesc">A Bomberman-inspired puzzle game where explosions carve a path through a maze derived from QR-code patterns — place bombs, collect powerups, kick bombs, and reach the exit before the shrinking safe zone forces you on. Every level's URL generates a unique maze.</p>
+          <p class="plinks"><a href="https://qrbomber.com/">[play it live]</a><span class="lock">[code: private]</span></p>
+        </li>
+
+        <li class="proj">
+          <div class="prow">
+            <span class="pdate">2023-11</span>
+            <a class="pname" href="https://photos.fuzzwah.com/">photos.fuzzwah.com</a>
+            <span class="pstat active">SITE LIVE</span>
+            <span class="pmeta">thumbsup · github actions</span>
+          </div>
+          <p class="pdesc">My photo gallery — albums of holidays, prints and favourites going back to 2010. Built on the zero-coding Thumbsup + GitHub Pages template with GitHub Actions as the free CI/CD, so adding an album is a commit away.</p>
+          <p class="plinks"><a href="https://photos.fuzzwah.com/">[gallery]</a><span class="lock">[code: private]</span></p>
+        </li>
+      </ul>
     </div>
   </div>
 
